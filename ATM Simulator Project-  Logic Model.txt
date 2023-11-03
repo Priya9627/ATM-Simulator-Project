@@ -1,0 +1,81 @@
+ATM Simulator Project-  Logic/ Models:-
+
+The detailed breakdown of the logic and models for the ATM simulator project:
+
+1.ATM Class:
+
+Create an ATM class to encapsulate the ATM's functionality.
+
+class ATM:
+    def _init_(self, balance, pin):
+        self.balance = balance
+        self.pin = pin
+
+Initialize the ATM with a starting balance and a PIN.
+
+2.Check Balance
+
+Create a method in the ATM class to check the account balance.
+
+    def check_balance(self):
+        return self.balance
+
+3.Deposit:
+
+Implement a method to handle deposits and update the account balance.
+
+    def deposit(self, amount):
+        self.balance += amount
+        return f"Deposited ${amount}. New balance: ${self.balance}"
+
+4.Withdraw:
+
+Create a method to handle withdrawals and ensure the account has sufficient funds.
+
+    def withdraw(self, amount):
+        if amount <= self.balance:
+            self.balance -= amount
+            return f"Withdrew ${amount}. New balance: ${self.balance}"
+        else:
+            return "Insufficient balance."
+
+5.Main Loop:
+
+In the main part of the script, initialize the ATM object and start a loop to present options to the user.
+
+pin = input("Enter your PIN: ")
+atm = ATM(1000, pin)  # Starting balance is $1000
+
+while True:
+
+6.Menu Options:
+
+Display a menu of options to the user and get their choice.
+
+
+    print("\nOptions:")
+    print("1. Check Balance")
+    print("2. Deposit")
+    print("3. Withdraw")
+    print("4. Exit")
+    option = input("Select an option (1/2/3/4): ")
+
+7.Option Handling:
+
+Based on the user's choice, call the corresponding methods in the ATM class and provide appropriate feedback to the user.
+
+    if option == "1":
+        print("Balance: $", atm.check_balance())
+    elif option == "2":
+        amount = float(input("Enter the deposit amount: $"))
+        print(atm.deposit(amount))
+    elif option == "3":
+        amount = float(input("Enter the withdrawal amount: $"))
+        print(atm.withdraw(amount))
+    elif option == "4":
+        print("Exiting. Thank you!")
+        break
+    else:
+        print("Invalid option. Please select 1, 2, 3, or 4.")
+
+This logic and model represent a basic ATM simulator in Python. Users can enter their PIN, check their balance, deposit, withdraw, and exit. It handles invalid options and provides feedback accordingly.

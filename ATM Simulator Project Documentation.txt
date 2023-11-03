@@ -1,0 +1,84 @@
+ATM Simulator Project Documentation
+Overview
+
+This ATM simulator project is designed to mimic the basic functionalities of a real-world ATM machine. Users can interact with the system to check their account balance, deposit funds, withdraw cash, and exit the application.
+
+
+Table of Contents
+
+1.Project structure 
+
+2.ATM Classes 
+
+3.Usage
+
+4.Example
+
+Project Structure
+
+atm_simulator.py: The main Python script that contains the ATM simulator code.
+
+ATM Class:-
+
+Attributes
+
+balance: Represents the account balance.
+
+pin: Stores the user's PIN for authentication.
+
+Methods:-
+
+1. __init__(self, balance, pin): Constructor method to initialize the ATM with a balance and PIN.
+
+2. check_balance(self): Method to check the account balance.
+
+3. deposit(self, amount): Method to deposit funds into the account.
+
+4. withdraw(self, amount): Method to withdraw funds from the account, ensuring there are sufficient funds.
+
+Usage:-
+
+1. PIN Entry: Users are prompted to enter their PIN to access the ATM.
+
+2. Main Menu:
+
+After successful PIN entry, users are presented with a main menu containing the following options:
+
+Check Balance
+
+Deposit
+
+Withdraw
+
+Exit
+
+3. Option Selection:
+
+Users can select an option by entering the corresponding number (1 for Check Balance, 2 for Deposit, 3 for Withdraw, and 4 for Exit).
+
+4. Functionality:
+
+Based on the selected option, the ATM performs the desired action and provides feedback to the user.
+
+5. Error Handling:
+
+The system handles errors such as an invalid PIN, insufficient balance, or an invalid option gracefully and provides appropriate error messages
+
+Example:-
+
+Here is an example of how to use the ATM simulator:
+
+1. Run the atm_simulator.py script.
+
+2. Enter your PIN when prompted.
+
+3. You will be presented with the main menu.
+
+4. Choose an option (e.g., 1 to Check Balance, 2 to Deposit, 3 to Withdraw, or 4 to Exit).
+
+5. Follow the on-screen instructions to complete the selected action.
+
+6. The system will provide feedback on the action performed.
+
+7. You can continue to use the ATM until you choose to exit.
+
